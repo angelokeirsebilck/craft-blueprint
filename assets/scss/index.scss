@@ -1,0 +1,32 @@
+/* BOOTSTRAP OVERWRITE */
+
+@import "vars";
+@import "~bootstrap/scss/bootstrap";
+
+// Icons
+
+@import "icomoon/style.css";
+
+// Packages
+
+@import "_hamburgers";
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
+@import '~swiper/swiper-bundle.css';
+
+// Custom
+
+@import "custom";
+@import "header";
+@import "footer";
+@import "nav";
+@import "helpers";
+
+
+// Components
+
+@import "./components/cta";
+@import "./components/textImage";
+@import "./components/text";
+
+//    Home
+@import "./components/home/homeBanner";

@@ -1,0 +1,29 @@
+{% set imgClass = imgClass|default('img-fluid w-100 lazy lazy-fadein') %}
+{# default smallest (mobile first) #}
+{% set xs = xs is not defined ? {width:540, position:'center-center'} : xs %}
+
+<picture class="{% if pictureClass is defined %}{{ pictureClass }}{% endif %}">
+	{% if xxl is defined %}
+		{# set xxl = xxl is not defined ? {width:1920, position: 'center-center'} : xxl #}
+		<source media="(min-width: 1520px)" {% if 'lazy' in imgClass %}data-srcset="{{ asset.getUrl(xxl) }}" srcset="/pixel.png"{% else %}srcset="{{ asset.getUrl(xxl) }}"{% endif %}>
+	{% endif %}
+	{% if xl is defined %}
+		{# set  xl =  xl is not defined ? {width:1520, position:'center-center'} : xl #}
+		<source media="(min-width: 1200px)" {% if 'lazy' in imgClass %}data-srcset="{{ asset.getUrl(xl) }}"  srcset="/pixel.png"{% else %}srcset="{{ asset.getUrl(xl) }}"{% endif %}>
+	{% endif %}
+	{% if lg is defined %}
+		{# set  lg =  lg is not defined ? {width:1200, position:'center-center'} : lg #}
+		<source media="(min-width: 992px)" {% if 'lazy' in imgClass %}data-srcset="{{ asset.getUrl(lg) }}"  srcset="/pixel.png"{% else %}srcset="{{ asset.getUrl(lg) }}"{% endif %}>
+	{% endif %}
+	{% if md is defined %}
+		{# set  md =  md is not defined ? {width:1024, position:'center-center'} : md #}
+		<source media="(min-width:  768px)" {% if 'lazy' in imgClass %}data-srcset="{{ asset.getUrl(md) }}"  srcset="/pixel.png"{% else %}srcset="{{ asset.getUrl(md) }}"{% endif %}>
+	{% endif %}
+	{% if sm is defined %}
+		{# set  sm =  sm is not defined ? {width: 768, position:'center-center'} : sm #}
+		<source media="(min-width:  576px)" {% if 'lazy' in imgClass %}data-srcset="{{ asset.getUrl(sm) }}"  srcset="/pixel.png"{% else %}srcset="{{ asset.getUrl(sm) }}"{% endif %}>
+	{% endif %}
+	<img class="{{ imgClass }}" alt="{{ asset.title }}"
+			{% if 'lazy' in imgClass %} src="/pixel.png" data-src="{{ asset.getUrl(xs) }}"{% else %} src="{{ asset.getUrl(xs) }}"{% endif %}
+	>
+</picture>

@@ -1,0 +1,40 @@
+---
+name: 'Contact Notification NL'
+description: 'A description of what this template does.'
+fromName: '{{ craft.app.systemSettings.getSettings("email").fromName }}'
+fromEmail: '{{ craft.app.systemSettings.getSettings("email").fromEmail }}'
+replyTo: '{{ craft.app.systemSettings.getSettings("email").fromEmail }}'
+cc: null
+bcc: null
+subject: 'Bedankt voor je inzending.'
+includeAttachments: true
+---
+<p>
+    <img src="{{ alias('@primarySite') }}/uploads/logo/touchwalls-logo.svg" alt="BOA" width="215">
+    <br><br>
+</p>
+
+{% set customer = form.fields.firstname.valueAsString %}
+
+<p>Beste,<br><br></p>
+
+<p>We hebben je bericht goed ontvangen op {{ dateCreated|date('l, F j, Y \\a\\t g:ia') }}:</p>
+
+<table>
+    {% for field in form.fields %}
+		{% if field.handle == 'message' %}
+			<tr><td colspan="2">{{ field.label }}:</td></tr>
+			<tr><td colspan="2">{{ field.valueAsString }}</td></tr>
+        {% elseif field.handle != 'privacy' %}
+            {% if '|' in field.label %}
+                <tr><td>{{ field.label|split('|')[0] }}</td><td>{{ field.valueAsString }}</td></tr>
+            {% else %}
+                <tr><td>{{ field.label|replace({'#':''}) }}</td><td>{{ field.valueAsString }}</td></tr>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</table>
+
+<p>Bedankt voor uw bericht! We proberen dit zo snel mogelijk te beantwoorden.</p>
+
+<p>Met vriendelijke groeten,<br>BOA</p>

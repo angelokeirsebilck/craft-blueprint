@@ -1,0 +1,4 @@
+{#{% include [entry.type.handle ~ "/index.twig", "pages/" ~ entry.type.handle,"_errors/#{entry.type.handle|replace('page','')}", "pages/_default.twig"] %}#}
+
+{#{% dd entry.type.handle %}#}
+{% include [entry.type.handle ~ "/index.twig", "pages/" ~ entry.type.handle, "_errors/#{entry.slug}", "pages/default.twig"] %}

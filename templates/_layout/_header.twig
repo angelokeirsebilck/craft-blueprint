@@ -1,0 +1,58 @@
+{% set mainNav = globalNavigation.fieldMainNav.all() %}
+
+{% apply spaceless %}
+	<header class="header d-flex align-items-center {{ isIE() ? 'position-relative' }}">
+		<div class="container d-flex align-items-center">
+			{% if globalCompanyInfo.fieldLogo.one() %}
+				{% set logo = globalCompanyInfo.fieldLogo.one() %}
+				<a class="header-logoContainer d-inline-block position-relative z-index-10" href="{{ siteUrl }}">
+					<img src="{{ globalCompanyInfo.fieldLogo.one().url }}" class="header-logo" alt="Hageland Meubel Website Logo">
+				</a>
+			{% endif %}
+			<nav class="nav py-0 h-100 w-100">
+				<div class="h-100 w-100 d-flex flex-row justify-content-end justify-content-xl-start position-relative">
+					<div class="hamburger hamburger--spin d-flex align-items-center d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				  </span>
+					</div>
+					<div class="w-100 nav-menu">
+						<div class="d-flex justify-content-center align-items-center align-items-xl-start justify-content-xl-end h-100 w-100">
+							<ul class="list-unstyled navbar-nav text-center text-xl-start d-flex flex-column flex-xl-row align-items-center justify-content-center h-100">
+								{% nav navEntry in mainNav %}
+									{% set isActive = false %}
+									{% if entry is defined and entry is not null  %}
+										{% if entry.parent %}
+											{% if navEntry.itemLink.getElement().id == entry.parent.id %}
+												{% set isActive = true %}
+											{% endif %}
+										{% endif %}
+										{% if entry.section.handle != 'pages' and not entry.section.type == 'single' %}
+											{% if navEntry.itemLink.getElement().type.handle %}
+												{% if navEntry.itemLink.getElement().type.handle == entry.type.handle %}
+													{% set isActive = true %}
+												{% endif %}
+											{% endif %}
+										{% endif %}
+									{% else %}
+										{% if navEntry.itemLink.getElement().id == category.id %}
+											{% set isActive = true %}
+										{% endif %}
+									{% endif %}
+									{% if category is defined %}
+{#										{% dd category.group.handle %}#}
+										{% set isActive = category.group.handle ==   navEntry.itemLink.getElement().type.handle %}
+									{% endif %}
+									<li class="nav-item mb-3 mb-xl-0">
+										<a class="nav-link d-inline-block p-0{{ entry is defined and navEntry.itemLink.getElement().id == entry.id  or isActive ? ' active' }}"  href="{{ navEntry.itemLink.getUrl() }}">{{ navEntry.itemLink.getText() }}</a>
+									</li>
+								{% endnav %}
+							</ul>
+							{#						{% include '_inc/_languagedropdown.twig'%}#}
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+{% endapply %}

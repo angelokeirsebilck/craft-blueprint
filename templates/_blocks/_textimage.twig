@@ -1,0 +1,35 @@
+{% import "_macros/_tools.twig" as macros %}
+
+<div class="textImage {{ block.itemBackgroundColor == 'white' ? 'bg-white section' : 'bg-light section-bg' }}">
+    <div class="container ">
+        <div class="row gy-3">
+            <div class="col-lg-5 d-flex flex-column {{ block.itemImagePosition == 'left' ? 'order-1 order-lg-2 offset-lg-1' : 'order-1 order-lg-1' }} {{ block.itemTextVerticalAlignment == 'center' ? 'justify-content-center' : 'justify-content-start' }}">
+                {% if block.itemTitle|length > 0 %}
+                    <h1 class="h1">{{ block.itemTitle }}</h1>
+                {% endif %}
+                {% if block.itemText|length > 0 %}
+                    <div class="font-20 letter-spacing-13">
+                            {{ block.itemText}}
+                    </div>
+                {% endif %}
+                {% if block.itemLink.getLink() %}
+                    <div class="d-none d-lg-block mt-3 mt-lg-5">
+                        <a href="{{ block.itemLink.getUrl() }}" class="btn btn-black">{{ block.itemLink.getText() }}</a>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-lg-6 {{ block.itemImagePosition == 'left' ? 'order-2 order-lg-1' : 'order-2 order-lg-2 offset-lg-1' }} ">
+                <picture class="position-relative">
+                    {% set max = {width:992, position:'center-center'} %}
+                    {% set asset = block.itemImage.one() %}
+                    <img loading="lazy" class="img-fluid lazy lazy-fadein z-index-3 position-relative" src="{{ asset.getUrl(max) }}" data-src="{{ asset.getUrl(max) }}" srcset="{{ macros.srcset(asset, null, null) }}" sizes="100vw" alt="{{ asset.title }}" width="{{ asset.getWidth(max) }}" height="{{ asset.getHeight(max) }}">
+                </picture>
+                {% if block.itemLink.getLink() %}
+                    <div class="d-block d-lg-none mt-3 mt-lg-5">
+                        <a href="{{ block.itemLink.getUrl() }}" class="btn btn-black">{{ block.itemLink.getText() }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

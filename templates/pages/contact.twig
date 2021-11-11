@@ -1,0 +1,19 @@
+{% extends "_layout/_base" %}
+{% import "_macros/_tools.twig" as macros %}
+
+{% set content = entry.fieldContentBuilder.all() %}
+
+{% block content %}
+
+    <div class="container mt-5 mt-lg-10">
+        <h1 class="h1 fw-semi-bold">{{ entry.title }}</h1>
+    </div>
+
+    {% include "_inc/_contact" %}
+
+    {% for block in content %}
+        {% include "/_blocks/_#{block.type.handle|replace('type','')|lower}.twig" with {
+            "block": block
+        } %}
+    {% endfor %}
+{% endblock %}

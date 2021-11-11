@@ -1,0 +1,29 @@
+.header{
+  min-height: $header-height;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  transition: transform .4s;
+  will-change: transform;
+
+  &-logo{
+
+    @include media-breakpoint-up(md) {
+
+    }
+  }
+
+  &--pinned{
+    transform: translateY(0);
+  }
+
+  &--unpinned{
+    transform: translateY(-100%);
+  }
+
+  &--translateFix{
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,157 @@
+dateModified: 1636613468
+email:
+  fromEmail: angelo@boa.be
+  fromName: 'BOA BluePrint'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    0a99b43e-940f-49e7-a5f6-664ce7b6a902: 'Title Top' # Title Top
+    0ab86f15-0fb5-48b5-b827-ef1d463bf1fd: Home # Home
+    0bdaa3c3-c4f3-458c-9fdb-988f1e9ce6b3: 'Footer Highlight Link' # Footer Highlight Link
+    0cee2900-b526-428e-910a-c489140fe39b: Cta # Cta
+    1abb0346-010b-45fd-bec0-993a7d226299: Title # Title
+    1b16f4ff-58a1-4816-8071-be914f6b1c87: 'OG Description' # OG Description
+    1bc335c1-25cf-44c7-ada3-cd7fbd3caf10: 'Company Name' # Company Name
+    1d137e05-32c2-451d-bdd7-87e99ef221bc: 'Text Align' # Text Align
+    2e7957a0-2570-4502-888c-c0037e628473: Navigation # Navigation
+    4b254df8-eda9-4d1a-af0e-e72654f09862: 'BOA NL' # BOA NL
+    04c8d40c-466c-43af-831f-633c3b8c16ee: 'Main Nav' # Main Nav
+    5d0915dc-758f-4f02-a0e6-3505b199c8e4: 'Content Builder' # Content Builder
+    6bcce257-9cbd-466c-ab2a-70e0e2d6d69c: Text # Text
+    6bf679bc-2009-4681-a877-d3285c36f19b: Common # Common
+    6cac4650-683d-4abd-928f-b942038975ed: Common # Common
+    7d1543a1-678b-476a-b690-891c72786822: 'Meta Title' # Meta Title
+    7d553649-04b6-48c8-acd3-565fafc78e0d: 'AK BluePrint' # AK BluePrint
+    8a5f2e8c-5816-4990-a8d1-c8b393806c13: 'Openings Hours' # Openings Hours
+    8d815bed-898a-4f01-ae18-11beb0f9327c: 'Company Info' # Company Info
+    9acb56d7-287a-4a76-8b96-47468891dc74: 'Linked In' # Linked In
+    09b28390-4cbd-4003-baa5-a9f87ee31743: Instagram # Instagram
+    9cb44f64-2eb1-4baa-b798-178dbca84cb7: SEO # SEO
+    9d15096e-7b20-4a40-8c7a-185307bbc8ad: Contact # Contact
+    9fafec74-02e0-4b8b-b937-2338db240270: Link # Link
+    18e7e1dd-77f3-462d-9cdb-48a65dabb58a: Home # Home
+    30f7dd35-ad08-4025-9d33-15561888bb91: Title # Title
+    32dc6c82-9422-460d-8097-ec1db2e1f313: Media # Media
+    42e4b87a-11ca-4336-9068-d3ba7bdee83e: 'Background Color' # Background Color
+    49f5bf60-a043-43c4-9f55-33082a51d9a8: Text # Text
+    51e19aef-6e3c-470e-ade7-59d1c731d552: 'Error Pages' # Error Pages
+    52ae72c6-26f5-4db1-832e-71dd2d2aa0f9: 'Text Vertical Alignment' # Text Vertical Alignment
+    56eaa975-ca03-4a1e-82b5-0a7b2321e6b0: 'Company Info' # Company Info
+    57db1564-f8b0-4422-8ed6-ac089e375d1f: 'Call to action' # Call to action
+    60c91530-925d-4715-b38f-17ff54338694: Facebook # Facebook
+    237f291b-48be-4a0d-8c51-4d9d6c60d100: Pinterest # Pinterest
+    244b20a6-6ded-48b8-99ee-da16dd37bf45: 'OG Image' # OG Image
+    360e97ad-1eb8-4861-820c-acb1f4badc1d: Favicon # Favicon
+    429d11ce-b6df-4ca1-a53b-5c9b8f04cc8b: Text # Text
+    491c055c-2628-40da-bcb0-9a2cf26cca36: 'Less Space Above Block' # Less Space Above Block
+    561bb2c1-6308-4adf-b0f8-7dfefe221bfc: Cta # Cta
+    961a322a-8161-4e1c-9906-a5e7ce548f2f: Logo # Logo
+    2827bb9b-5326-4bea-bf8b-29d20dbffa5c: 'OG Type' # OG Type
+    5360cdb9-f7ce-43ba-b49e-375b0e2c49cd: Link # Link
+    07096c30-8e1a-4e3b-bfb3-d98b2138ee06: Image # Image
+    8011ea88-1943-4a4c-ba26-1191373554b2: Link # Link
+    10688c27-74dd-43fd-bbe7-eee36d6c5363: 'Email Address' # Email Address
+    25640e0f-f12b-4b8b-811f-e910b9f6099c: 'Footer Nav' # Footer Nav
+    52936b9e-6123-4fbb-8269-ea2ad87d7269: 'Logo Footer' # Logo Footer
+    78845d9c-3260-44e1-a0c8-c4400102b6b8: Cta # Cta
+    224802c0-eb5d-462f-bc9e-9d893b1f9454: 'Contact Form' # Contact Form
+    377455a0-174e-4a76-9e47-6dee2b92801a: 'Address Line 3' # Address Line 3
+    746742b8-9eb5-47c0-b1c0-b49338783f9d: images # images
+    3898571d-3ae2-476b-9021-24acf0b4ba1b: videos # videos
+    7514806e-c1df-4653-94b3-b78d455b0d70: 'Legal Pages' # Legal Pages
+    9337590f-ea60-4217-a860-a496cc7ca9b3: Telephone # Telephone
+    20991694-db86-4d2a-b2a1-d6ac860928bc: 'BOA EN' # BOA EN
+    40118880-62d4-4fbf-8042-a6ae185ec517: Link # Link
+    a3c895fe-61dd-46f2-9710-b76431f5e912: 'Home Banner' # Home Banner
+    a5f5350d-db25-4bc7-970f-417a1a5474b1: 'OG author' # OG author
+    a6bff601-c6df-43e6-a60e-62b84d97aa99: Text # Text
+    a6d49bbe-1568-4743-94d7-3ce90204cdd3: 'Google Maps API Key' # Google Maps API Key
+    ae65a5d7-f56a-4a74-b8b8-f11d31ba8256: Link # Link
+    b6e0ac43-9540-4a47-8081-000d36681d5e: 'Address Line 2' # Address Line 2
+    b6ef3494-9873-433e-8880-e1de2af3627b: Text # Text
+    b8f836d8-85ae-48b6-8f62-cfcd0028ff83: 'Call to action Content' # Call to action Content
+    b57f088d-e825-4e91-a027-a389daf1278b: 'Legal Pages' # Legal Pages
+    b1798a9a-6b6a-4d28-ac64-fed948463639: 'Legal Nav' # Legal Nav
+    ba2ae23e-61e2-41a5-a003-4f515f0e6bc4: Link # Link
+    bc763e11-234b-4437-83de-07822221a2a4: Link # Link
+    c34f21a8-b280-45ad-8641-cb88e017cee7: Home # Home
+    cda2b993-835f-494f-8ec9-bbeb85e6881a: 'Privacy Policy' # Privacy Policy
+    ceb61fbe-fc4b-4476-832e-f21b8191e39f: 'Text / Media' # Text / Media
+    d8d14485-2d82-487d-8749-d83d5dc36bfb: Link # Link
+    df9091c7-0bb3-4e67-9c06-111bfa07c278: BOA # BOA
+    e3cd1c4b-6b46-4cf5-a5a7-5fd450558464: 'OG Title' # OG Title
+    e5f23b08-f494-4e5a-bd34-63fde9104ac7: Title # Title
+    e570d95a-0daf-43c4-93cd-19cf513a01bd: 'Media Position' # Media Position
+    e9620a13-02d3-40a2-857b-7ab26abaedfc: 'Background Color' # Background Color
+    eaa75fe2-a91a-4257-8b30-8fc88f7f080a: 'Banner Image' # Banner Image
+    eef2174e-a25e-4b46-88f4-77f2459ba16a: 'Public Schema' # Public Schema
+    f0908c41-408b-4fd4-a5ac-6c0d41ec5cc2: Navigation # Navigation
+    f39b071e-b23f-4a0b-9733-e170e72926b9: 'Touch Icon' # Touch Icon
+    f99e99cc-dae2-473e-ba4c-e98eea5ef796: 'Company Baseline' # Company Baseline
+    f2294c0a-c3b6-4abe-ad5b-29d196b3893b: 'Address Line 1' # Address Line 1
+    f9227f0d-095b-47fa-b364-b16da4d9c9f4: 'Meta Description' # Meta Description
+    fd065821-1121-4e33-b343-17ef33ed2d82: Pages # Pages
+plugins:
+  command-palette:
+    schemaVersion: 3.0.0
+  cp-css:
+    schemaVersion: 2.0.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  express-forms:
+    edition: lite
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      duplicatePreventionEnabled: true
+      emailNotificationsDirectoryPath: _email/_notifications
+      enhancedUI: true
+      honeypotBehaviour: simulate_success
+      honeypotEnabled: '1'
+      honeypotInputName: website
+      name: null
+      recaptchaEnabled: ''
+      recaptchaLoadScript: '1'
+      recaptchaSecretKey: null
+      recaptchaSiteKey: null
+      recaptchaTheme: light
+      showErrorLogBanner: true
+  field-manager:
+    schemaVersion: 1.0.0
+  logs:
+    schemaVersion: 3.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  sitemap:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: 'BOA BluePrint'
+  retryDuration: null
+  schemaVersion: 3.7.8
+  timeZone: Europe/Brussels
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

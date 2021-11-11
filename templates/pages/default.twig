@@ -1,0 +1,14 @@
+{% extends "_layout/_base.twig" %}
+{% set content = entry.fieldContentBuilder.all() %}
+
+{% block content %}
+    <div class="container mt-5 mt-lg-10">
+        <h1 class="h1 fw-semi-bold">{{ entry.title }}</h1>
+    </div>
+    {% for block in content %}
+        {% include "/_blocks/_#{block.type.handle|replace('type','')|lower}.twig" with {
+            "block": block
+        } %}
+    {% endfor %}
+
+{% endblock %}

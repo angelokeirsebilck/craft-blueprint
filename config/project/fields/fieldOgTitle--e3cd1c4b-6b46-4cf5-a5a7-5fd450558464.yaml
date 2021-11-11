@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string(512)
+fieldGroup: 9cb44f64-2eb1-4baa-b798-178dbca84cb7 # SEO
+handle: fieldOgTitle
+instructions: ''
+name: 'OG Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 128
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

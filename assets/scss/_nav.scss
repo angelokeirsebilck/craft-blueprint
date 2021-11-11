@@ -1,0 +1,45 @@
+.nav{
+
+  &-menu{
+    position: fixed;
+    top: $header-height;
+    right: 0;
+    height: calc(100vh - #{$header-height});
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s;
+
+    @include media-breakpoint-up(xl) {
+      position: relative;
+      height: auto;
+      top: initial;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &-menu.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &-link{
+
+  }
+
+  &-link.active{
+
+  }
+
+  &-item+ .nav-item{
+    margin-left: 0;
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 3rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-left: 5.7rem;
+    }
+  }
+}

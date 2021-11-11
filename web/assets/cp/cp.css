@@ -1,0 +1,40 @@
+.widget[data-type*="WidgetBoaSupport"] .pane {
+    background-color: #191919;
+    color: white;
+}
+.widget[data-type*="WidgetBoaSupport"] .pane a {
+    color: white;
+}
+/* Sidebar background color */
+#global-sidebar {
+    background: #191919;
+}
+#system-info {
+    background-color: transparent;
+}
+
+/* Header background color
+#main-container #main #header {
+    background: #ebedef;
+}
+*/
+/* H1 tags
+h1 {
+    color: #29323d;
+}
+*/
+/* Standard button color
+.btn.submit {
+    background: #da5a47;
+}*/
+/* Hover button color
+.btn.submit:not(.disabled):not(.inactive):hover,
+.btn.submit:not(.disabled):not(.inactive).hover {
+    background: #bf503f;
+}*/
+/* Active button color
+.btn.submit:not(.disabled):not(.inactive):active,
+.btn.submit:not(.disabled):not(.inactive).active {
+    background: #8c3b2e;
+}
+*/

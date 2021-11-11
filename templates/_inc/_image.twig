@@ -1,0 +1,13 @@
+{% if block.image|length > 1 %}
+	{% set lazyLoad = null %}
+{% endif %}
+
+{% set assets = block.image.all() %}
+
+<div class="h-100 slick-default" style="opacity:0;">
+	{% for asset in assets %}
+		<div>
+			{% include './boa/picture.twig' %}
+		</div>
+	{% endfor %}
+</div>

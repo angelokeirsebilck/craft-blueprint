@@ -1,0 +1,28 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f0908c41-408b-4fd4-a5ac-6c0d41ec5cc2 # Navigation
+handle: fieldFooterNav
+instructions: ''
+name: 'Footer Nav'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - bc763e11-234b-4437-83de-07822221a2a4 # Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_fieldfooternav}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

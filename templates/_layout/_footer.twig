@@ -1,0 +1,25 @@
+{% import '_macros/_tools' as macros %}
+
+{% apply spaceless %}
+	<footer class="footer">
+		<div class="footer-top">
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="d-flex flex-column flex-md-row justify-content-between">
+					<div class="mb-1 mb-md-0">
+						<div class="d-inline-block me-1">© {{ 'now' | date('Y') }}<span class="ms-1">  {{ globalCompanyInfo.fieldCompanyName }}</span></div>
+						<span class="d-inline-block me-1">{{ 'allrights'|t }}</span>
+					</div>
+					<div class="d-flex flex-column flex-md-row ">
+						<div class="d-inline-block">
+							{% for legalNav in globalNavigation.fieldLegalNav.all() %}
+								<a href="{{ legalNav.itemLink.getUrl() }}" class="footer-gdprLink text-nowrap text-decoration-none {{ not loop.last ? 'me-3' }}">{{ legalNav.itemLink.getText() }}</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+{% endapply %}

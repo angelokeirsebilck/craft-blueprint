@@ -1,0 +1,38 @@
+{% if urlAlternatives|length > 0 %}
+	<div class="d-none d-lg-inline-block">
+		<button type="button" class="btn btn-link p-0 link-white fw-bold outline-none box-shadow-none ms-8 d-flex justify-content-center align-items-center text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+{#			{% set nativeName = craft.app.i18n.getLocaleById(currentSite.language).displayName %}#}
+{#			{% set languageLong = nativeName|split("(")[0] %}#}
+
+{#			{% if mobile %}#}
+{#					<span class="text-decoration-underline link-white">{{ languageLong|trim }}</span>#}
+{#				{% else %}#}
+{#					<span class="d-none d-lg-inline-block text-decoration-underline">{{ languageLong|trim }}</span>#}
+{#					<span class="d-inline-block d-lg-none text-decoration-underline">{{ currentSite.language|slice(0, 2)|t|upper}}</span>#}
+{#			{% endif %}#}
+			<span class="d-inline-block text-decoration-none">{{ currentSite.language|slice(0, 2)|t|upper}}</span>
+
+			<i class="icon-chevron-down text-decoration-none d-inline-block ms-50 text-white" style="font-size:12px;"></i>
+		</button>
+		<div class="dropdown-menu dropdown-menu-end mt-1 px-1" aria-labelledby="navbarLanguage">
+			{% for site in urlAlternatives %}
+				{% set nativeName = craft.app.i18n.getLocaleById(site.lang).displayName %}
+				{% set languageLong = nativeName|split("(")[0] %}
+				{% if currentSite.id != site.id %}
+					<a class="dropdown-item fw-bold text-center {{ site.id == currentSite.id ? 'active' : '' }}" href="{{ site.url }}">{{ languageLong|upper }}</a>
+{#					<a class="dropdown-item" href="{{ site.url }}">{{ site.language }}</a>#}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	<div class="d-inline-block d-lg-none">
+		<ul class="list-unstyled bg-white">
+			<li>
+				{% for site in urlAlternatives %}
+					<a class="fw-bold nav-lang p-50 text-center text-decoration-none {{ site.id == currentSite.id ? 'active' : '' }}" href="{{ site.url }}">{{ site.lang|slice(0, 2)|t|upper}}</a>
+						{#					<a class="dropdown-item" href="{{ site.url }}">{{ site.language }}</a>#}
+				{% endfor %}
+			</li>
+		</ul>
+	<div>
+{% endif %}

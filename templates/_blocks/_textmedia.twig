@@ -1,0 +1,82 @@
+{% import "_macros/_tools.twig" as macros %}
+
+<div class="textMedia {{ block.itemBackgroundColor == 'white' ? 'section' : 'section-bg bg-light' }}">
+    <div class="container">
+        <div class="row gy-3">
+            <div class=" d-flex flex-column {{ block.itemImagePosition == 'left' ? 'col-lg-5 offset-lg-1 order-1 order-lg-2 ' : 'col-lg-5 order-1 order-lg-1' }} {{ block.itemTextVerticalAlignment == 'center' ? 'justify-content-center' : 'justify-content-start' }}">
+                {% if block.itemTitleTop|length > 0 %}
+                    <span class="h4">
+                        {{ block.itemTitleTop|nl2br }}
+                    </span>
+                {% endif %}
+                {% if block.itemTitle|length > 0 %}
+                    <h2 class="h2">{{ block.itemTitle|nl2br }}</h2>
+                {% endif %}
+                {% if block.itemText|length > 0 %}
+                    <div class="textMedia-text">
+                        {{ block.itemText}}
+                    </div>
+                {% endif %}
+                {% if block.itemLink.getLink() %}
+                    <div class="d-none d-lg-block mt-2 mt-lg-5">
+                        <a href="{{ block.itemLink.getUrl() }}" class="btn btn-primary text-uppercase fw-bold">{{ block.itemLink.getText() }}</a>
+                    </div>
+                {% endif %}
+            </div>
+            <div class=" {{ block.itemImagePosition == 'left' ? 'col-lg-6 order-2 order-lg-1' : 'col-lg-6 offset-lg-1 order-2 order-lg-2' }} ">
+                {% for media in block.itemMedia.all() %}
+                    {% if media.itemMedia.one().type.handle == 'typeVideo' %}
+                        {% set asset = media.itemMedia.one().itemThumbnail.one() %}
+                        {% if media.itemMedia.one().itemVideo.one().kind == 'json' %}
+                            {% set video = craft.embeddedAssets.get(media.itemMedia.one().itemVideo.one())  %}
+                            {% set url = video.url %}
+
+                            {% if video.providerName == 'vimeo' or video.providerName == 'Vimeo' %}
+                                {% set urlSplit = video.url|split('/') %}
+                                {% set id = urlSplit[urlSplit|length - 1] %}
+                                <div class="invisible" style="height: 0;">
+                                    <iframe src="https://player.vimeo.com/video/{{ id }}"
+                                            id="vimeo"
+                                            width="1920px"
+                                            height="1080px"
+                                            frameBorder="0"
+                                            allow="autoplay; fullscreen"
+                                            allowFullScreen>
+                                    </iframe>
+                                </div>
+                                {% set url = '#vimeo' %}
+                            {% endif %}
+                        {% else %}
+                            {% set video = media.itemMedia.one().itemVideo.one() %}
+                            {% set url = video.url %}
+                        {% endif %}
+                        <a data-fslightbox="lightbox-{{ block.id }}" href="{{ url }}" class="textMedia-thumbnail position-relative">
+                            <div class="textMedia-playContainer">
+                                {{ svg('../assets/svg/play.svg')|attr({
+                                    class: 'textMedia-play'
+                                }) }}
+                            </div>
+
+                            <picture class="position-relative">
+                                {% set max = {width:992, position:'center-center'} %}
+                                <img loading="lazy" class="img-fluid lazy lazy-fadein z-index-3 position-relative" src="{{ asset.getUrl(max) }}" data-src="{{ asset.getUrl(max) }}" srcset="{{ macros.srcset(asset, null, null) }}" sizes="100vw" alt="{{ asset.title }}" width="{{ asset.getWidth(max) }}" height="{{ asset.getHeight(max) }}">
+                            </picture>
+                        </a>
+                    {% else %}
+                        <picture class="position-relative">
+                            {% set max = {width:992, position:'center-center'} %}
+                            {% set asset = media.itemMedia.one().itemImage.one() %}
+                            <img loading="lazy" class="img-fluid lazy lazy-fadein z-index-3 position-relative" src="{{ asset.getUrl(max) }}" data-src="{{ asset.getUrl(max) }}" srcset="{{ macros.srcset(asset, null, null) }}" sizes="100vw" alt="{{ asset.title }}" width="{{ asset.getWidth(max) }}" height="{{ asset.getHeight(max) }}">
+                        </picture>
+                    {% endif %}
+                {% endfor %}
+
+                {% if block.itemLink.getLink() %}
+                    <div class="d-block d-lg-none mt-2 mt-lg-5">
+                        <a href="{{ block.itemLink.getUrl() }}" class="btn btn-primary text-uppercase fw-bold">{{ block.itemLink.getText() }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 78845d9c-3260-44e1-a0c8-c4400102b6b8 # Cta
+handle: fieldCallToAction
+instructions: ''
+name: 'Call to action Content'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 6bcce257-9cbd-466c-ab2a-70e0e2d6d69c # Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ae65a5d7-f56a-4a74-b8b8-f11d31ba8256 # Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_fieldcalltoaction}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

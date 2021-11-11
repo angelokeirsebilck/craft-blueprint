@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{ currentSite.language|slice(0, 2) }}">
+<head>
+    {% apply spaceless %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1{% if devMode %},user-scalable=no{% endif %}">
+        <meta name="robots" content="{% if devMode or entry.section.handle=='pageNotFound' %}noindex,nofollow{% else %}all{% endif %}">
+
+        {# Styles #}
+        <link rel="stylesheet" href="/build/app.css?v{{ craft.app.config.general.assetVersion }}">
+
+        {# Fonts #}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/zbq8ivi.css">
+
+    {% endapply %}</head>
+
+
+<body data-entry-id="{{ entry is defined ? entry.id : '?' }}" data-entry-type="{{ entry is defined ? entry.type : '?' }}">
+<div id="wrapper" class="d-flex flex-column">
+
+        <div class="container">
+            <div class="headings mb-5">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+            </div>
+            <div class="buttons mb-5">
+                <div class="mb-2">
+                    <a href="" class="btn btn-sm btn-primary text-uppercase">Lorem ipsum</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-primary text-uppercase">Neem contact op</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-lg btn-primary text-uppercase">Contacteer ons</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-sm btn-secondary text-uppercase">Lorem ipsum</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-secondary text-uppercase">Lorem ipsum</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-lg btn-secondary text-uppercase">Lorem ipsum</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-outline-primary text-uppercase">Lorem ipsum</a>
+                </div>
+                <div class="mb-2">
+                    <a href="" class="btn btn-outline-secondary text-uppercase">Lorem ipsum</a>
+                </div>
+
+            </div>
+
+            <div class="forms mb-5 w-50">
+                <div class="mb-3">
+                    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" name="Lorem ipsum">
+                        <option value="Loremipsum">Lorem ipsum</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+{#<script src="https://maps.googleapis.com/maps/api/js?key={{ globalCompanyInfo.fieldGoogleMapsAPIKey }}"></script>#}
+<script src="/build/runtime.js"></script>
+{#{{ gdpr()|raw }}#}
+<script src="/build/app.js?v{{ craft.app.config.general.assetVersion }}"></script>
+</body>
+</html>

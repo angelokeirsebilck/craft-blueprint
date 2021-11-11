@@ -1,0 +1,19 @@
+columnSuffix: aymeptiu
+contentColumnType: text
+fieldGroup: 9d15096e-7b20-4a40-8c7a-185307bbc8ad # Contact
+handle: fieldContactForm
+instructions: ''
+name: 'Contact Form'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

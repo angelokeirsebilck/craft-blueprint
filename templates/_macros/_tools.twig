@@ -1,0 +1,43 @@
+{% macro srcset(image, outputWidths, outputHeights, aspectRatio) %}
+    {# setup #}
+    {%- set outputWidths = outputWidths | default([576, 768, 992, 1200, 1640]) -%}
+    {%- set outputHeights = outputHeights | default([]) -%}
+    {%- set srcset = [] -%}
+    {# if output width is smaller than or equal to the original image width #}
+    {%- for outputWidth in outputWidths -%}
+        {%- if outputWidth <= image.width -%}
+            {%- if aspectRatio -%}
+                {%- set transformOptions = { width: outputWidth, height: outputWidth * aspectRatio } -%}
+            {%- else -%}
+                {%- if outputHeights and outputHeights[loop.index0] -%}
+                    {%- set transformOptions = { width: outputWidth, height: outputHeights[loop.index0] } -%}
+                {%- else -%}
+                    {%- set transformOptions = { width: outputWidth } -%}
+                {%- endif -%}
+            {%- endif -%}
+            {%- set srcset = srcset | merge([image.url(transformOptions) ~ ' ' ~ outputWidth ~ 'w']) -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {# output srcset #}
+    {{- srcset | join(', ') -}}
+{% endmacro %}
+
+{% macro button(url, style, label, hasIcon, iconPosition, iconClass) %}
+    <a href="{{ url }}" class="{{ style }}">
+        {% if hasIcon and iconPosition == 'prefix' %}
+            <i class="{{ iconClass }}"></i>
+        {% endif %}
+        <span class="text-decoration-underline">{{ label }}</span>
+
+        {% if hasIcon and iconPosition == 'suffix' %}
+            <i class="{{ iconClass }}"></i>
+        {% endif %}
+    </a>
+{% endmacro %}
+
+{# set max constraints  #}
+{#{% set max = {width:1920, height:526, position:'center-center'} %}#}
+{#{% import "_macros/_tools.twig" as macros %}#}
+{#<picture>#}
+{#    <img loading="lazy" class="img-fluid w-100" src="{{ asset.getUrl(max) }}" srcset="{{ macros.srcset(asset, null, [100, 200, 300, 400, 500]) }}" sizes="100vw" alt="{{ asset.title }}" width="{{ asset.getWidth(max) }}" height="{{ asset.getHeight(max) }}">#}
+{#</picture>#}

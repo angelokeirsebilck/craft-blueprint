@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: cta
+name: 'Call to action'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  20991694-db86-4d2a-b2a1-d6ac860928bc: # BOA EN
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

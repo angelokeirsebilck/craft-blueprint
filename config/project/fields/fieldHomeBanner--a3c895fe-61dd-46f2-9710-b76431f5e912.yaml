@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: c34f21a8-b280-45ad-8641-cb88e017cee7 # Home
+handle: fieldHomeBanner
+instructions: ''
+name: 'Home Banner'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 30f7dd35-ad08-4025-9d33-15561888bb91 # Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 40118880-62d4-4fbf-8042-a6ae185ec517 # Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_fieldhomebanner}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

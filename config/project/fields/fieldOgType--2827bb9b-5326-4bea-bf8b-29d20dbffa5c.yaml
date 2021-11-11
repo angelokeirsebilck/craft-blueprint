@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 9cb44f64-2eb1-4baa-b798-178dbca84cb7 # SEO
+handle: fieldOgType
+instructions: ''
+name: 'OG Type'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Website
+        -
+          - value
+          - website
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Article
+        -
+          - value
+          - article
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

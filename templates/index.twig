@@ -1,0 +1,14 @@
+{% extends "_layout/_base" %}
+{% set content = entry.fieldContentBuilder.all() %}
+
+{% block content %}
+    {% include "_blocks/_home/_homeBanner.twig" with {
+        block: entry.fieldHomeBanner.one()
+    } %}
+
+    {% for block in content %}
+        {% include "/_blocks/_#{block.type.handle|replace('type','')|lower}.twig" with {
+            "block": block
+        } %}
+    {% endfor %}
+{% endblock %}

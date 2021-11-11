@@ -1,0 +1,10 @@
+{#
+A macro looks like this:
+{% macro macroName(parameter1, parameter2) %}
+   contents of the macro here
+{% endmacro %}
+#}
+
+{% macro navRootActive(segment) %}
+    {% if craft.app.request.segments | first == segment %}active{% endif %}
+{% endmacro %}

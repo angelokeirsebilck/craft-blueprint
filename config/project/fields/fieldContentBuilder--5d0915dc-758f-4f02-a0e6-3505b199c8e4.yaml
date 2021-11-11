@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6bf679bc-2009-4681-a877-d3285c36f19b # Common
+handle: fieldContentBuilder
+instructions: ''
+name: 'Content Builder'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_fieldcontentbuilder}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

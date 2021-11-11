@@ -1,0 +1,100 @@
+// Bootstrap
+
+$enable-validation-icons:     false;
+
+// Colors
+
+$success: #bcc9a1;
+$primary: #1c8ced;
+$light: #f1f1f1;
+$body-color: #797979;
+
+$theme-colors: (
+        "success":    $success,
+        "primary":    $primary,
+        "light":      $light
+);
+
+$custom-colors: (
+        "body":       $body-color,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Grid columns
+$grid-gutter-width:                                      40px;
+
+// Grid containers (FLUID!)
+
+$container-max-widths: (
+        sm: 100%,
+        md: 100%,
+        lg: 100%,
+        xl: 100%,
+        xxl: 1520px + $grid-gutter-width,
+);
+
+// Grid breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxxl: 1640px
+) !default;
+
+// Fonts
+
+//$font-gtwalsheim:             'gtwalsheim', sans-serif;
+$font-size-base:              1.6rem;
+
+$font-weight-bold:            500;
+$font-weight-bolder:          700;
+//$font-family-sans-serif:      $font-gtwalsheim;
+
+// Links
+
+$link-color:                                          $primary;
+$link-decoration:                                     underline !default;
+$link-hover-color:                                    darken($link-color, 15%) !default;
+$link-hover-decoration:                               none !default;
+
+// Typography
+
+$line-height-base:          1.5;
+
+// Headings
+
+$headings-margin-bottom:     .6em;
+$headings-font-weight:        700;
+$headings-color:              #272727;
+
+// Spacing
+
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        50: $spacer * .5,
+        150: $spacer * 1.5,
+        1: $spacer,
+        2: $spacer * 2,
+        3: $spacer * 3,
+        4: $spacer * 4,
+        5: $spacer * 5,
+        6: $spacer * 6,
+        7: $spacer * 7,
+        8: $spacer * 8,
+        9: $spacer * 9,
+        10: $spacer * 10,
+        11:	$spacer * 11,
+        12: $spacer * 12,
+        13: $spacer * 13,
+        14: $spacer * 14,
+        15: $spacer * 15,
+        16: $spacer * 16,
+        17: $spacer * 17,
+        18: $spacer * 18,
+        20: $spacer * 20,
+);

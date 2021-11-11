@@ -1,0 +1,127 @@
+{% set form = craft.expressforms.form(formHandle) %}
+{% set formBlock = formBlock ?? null %}
+{% if form %}
+
+	{# Flash Success #}
+	{% if form.submittedSuccessfully %}
+		<div class="alert alert-success mb-2" role="alert">
+			{{ 'formSuccesText'|t }}
+		</div>
+	{% endif %}
+
+	{# General Error Handling #}
+	{% if not form.valid %}
+		<div class="alert alert-danger mb-2" role="alert">
+			{{ 'formErrorText'|t }}
+
+			{% if form.errors|length %}
+				<ul>
+					{% for error in form.errors %}
+						<li>{{ error|t }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+	{% endif %}
+	{# Automatically set Form tags with Return, CSRF and Honeypot (if enabled) #}
+	{{ form.openTag({
+		return: '?success=1',
+		attributes: {
+		'name':form.handle, 'novalidate':"novalidate", 'class':"needs-validation", 'accept-charset':"utf-8", 'autocomplete':'on'
+	} }) }}
+
+	<div class="row gx-4 gy-3 js-form">
+		{% set labels = false %}
+
+		{% for field in form.fields %}
+
+			{% switch field.type %}
+
+			{% case 'checkbox' %}
+				<div class="form-group col-12">
+					<div class="form-check">
+						<input type="checkbox" name="{{ field.handle }}" id="f{{ field.id }}" value="1" class="form-check-input form-check-privacy"{{ field.isRequired ? ' required' }}>
+						<label class="form-check-label" for="f{{ field.id }}">
+							{% if field.handle == 'privacy' %} {# privacy policy link #}
+								{% set privacyLink = null %}
+								{% for legalLink in globalNavigation.fieldLegalNav.all() %}
+									{% if legalLink.itemPrivacyPolicy %}
+										{% set privacyLink = legalLink.itemLink.url %}
+									{% endif %}
+								{% endfor %}
+								<span class="text-black">{{ field.name }} <a class="text-decoration-none" href="{{ privacyLink }}" target="_blank"> Privacy Policy* </a> </span>
+								{% else %}
+									{{ field.name }}
+							{% endif %}
+						</label>
+					</div>
+
+					<div class="invalid-feedback text-primary px-2 font-16">
+						{% if field.hasErrors %}
+							{% for error in field.errors %}
+								<p class="my-0">{{ error|t }}</p>
+							{% endfor %}
+						{% else %}
+							{% if field.type == 'email' %}
+								{{ 'formInputEmailError'|t }}
+							{% else %}
+								{{ 'formInputTextError'|t }}
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+
+			{% case 'options' %}
+				<div class="form-group col-12">
+					{% if labels %}
+						<label for="f{{ field.id }}">
+							{{ field.name }}{% if field.isRequired %} <span class="text-danger">*</span>{% endif %}
+						</label>
+					{% endif %}
+
+					<select class="form-select" name="{{ field.handle }}">
+						{% if options %}
+							{% for option in options %}
+								<option {{ loop.first ? 'disabled selected'}} value="{{ option.itemValue }}">{{ option.itemValue }}</option>
+							{% endfor %}
+						{% endif %}
+					</select>
+				</div>
+
+			{% default %}
+				<div class="{% if field.type == 'textarea' or formBlock %}col-12{% else %}col-lg-6{% endif %}">
+					<div class="form-floating">
+						{% if field.type == 'textarea' %}<textarea  name="{{ field.handle }}" id="f{{ field.id }}" rows="6" placeholder="{{ field.name }}" class="form-control contact-textarea outline-none box-shadow-none {{ field.hasErrors ? ' is-invalid' }}"{{ field.isRequired ? ' required' }}/></textarea>
+						{% else %}
+							<input type="{{ field.type }}" name="{{ field.handle }}" id="f{{ field.id }}" value="{{ field.value }}" placeholder="{{ field.name }}" class="form-control contact-input outline-none box-shadow-none {{ field.hasErrors ? ' is-invalid' }}"{{ field.isRequired ? ' required' }}>
+						{% endif %}
+						<label for="f{{ field.id }}">
+							{{ field.name }}{% if field.isRequired %} <span class="text-danger">*</span>{% endif %}
+						</label>
+						<div class="invalid-feedback px-2 font-16">
+							{% if field.hasErrors %}
+								{% for error in field.errors %}
+									<p class="my-0">{{ error|t }}</p>
+								{% endfor %}
+							{% else %}
+								{% if field.type == 'email' %}
+									{{ 'formInputEmailError'|t }}
+								{% else %}
+									{{ 'formInputTextError'|t }}
+								{% endif %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endswitch %}
+		{% endfor %}
+	</div>
+
+	<div class="mt-3 mt-lg-4">
+		<button type="submit" class="btn btn-black font-16">
+			{{ 'Submit'|t }}
+		</button>
+	</div>
+
+	{{ form.closeTag }}
+{% endif %}

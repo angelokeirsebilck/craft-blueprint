@@ -1,0 +1,19 @@
+{
+  "buttons": ["html", "fullscreen", "format", "bold", "italic", "underline", "link", "lists"],
+  "plugins": ["fullscreen","table"],
+  "formatting": ["p","h2","h3"],
+  "formattingAdd": {
+    "scroll-to": {
+      "title": "scrollTo",
+      "api": "module.inline.format",
+      "args": {
+        "tag": "span",
+        "class": "js-scrollTo",
+        "type": "add",
+        "style": {
+          "color": "green"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+baseUrl: /nl
+enabled: true
+handle: siteNl
+hasUrls: true
+language: nl
+name: 'BOA NL'
+primary: false
+siteGroup: df9091c7-0bb3-4e67-9c06-111bfa07c278 # BOA
+sortOrder: 2
