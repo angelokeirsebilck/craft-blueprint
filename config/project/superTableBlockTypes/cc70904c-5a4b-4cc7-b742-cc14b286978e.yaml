@@ -1,0 +1,211 @@
+field: f891cbad-b57f-4418-bb6f-2eafc7d16b0f # Call to action Content
+fieldLayouts:
+  2986c31c-66fa-4dd4-9c48-2b4d7defe4f6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 763e7140-57bb-4f42-bb7b-7e1d05803a4d # Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fe1e12ab-3384-421a-b3f3-be95a451dcaa # Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d4370c11-9895-4446-bf71-3ce2aed430fd # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  763e7140-57bb-4f42-bb7b-7e1d05803a4d: # Text
+    columnSuffix: rqfxlvxi
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemText
+    instructions: ''
+    name: Text
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: 1
+      redactorConfig: Full.json
+      removeEmptyTags: 1
+      removeInlineStyles: 1
+      removeNbsp: 1
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  d4370c11-9895-4446-bf71-3ce2aed430fd: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: itemImage
+    instructions: ''
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:746742b8-9eb5-47c0-b1c0-b49338783f9d'
+      defaultUploadLocationSubpath: ''
+      limit: 1
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: 1
+      selectionLabel: ''
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:746742b8-9eb5-47c0-b1c0-b49338783f9d'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:746742b8-9eb5-47c0-b1c0-b49338783f9d'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  fe1e12ab-3384-421a-b3f3-be95a451dcaa: # Link
+    columnSuffix: evodtyio
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemLink
+    instructions: ''
+    name: Link
+    searchable: false
+    settings:
+      allowCustomText: 1
+      allowTarget: 1
+      allowedLinkNames:
+        4: entry
+        9: url
+      autoNoReferrer: 1
+      defaultLinkName: entry
+      defaultText: ''
+      enableAriaLabel: ''
+      enableTitle: ''
+      typeSettings:
+        __assoc__:
+          -
+            - asset
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - category
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - user
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - entry
+            -
+              __assoc__:
+                -
+                  - sources
+                  - '*'
+                -
+                  - allowCustomQuery
+                  - ''
+          -
+            - site
+            -
+              __assoc__:
+                -
+                  - sites
+                  - '*'
+          -
+            - custom
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - email
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - tel
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+          -
+            - url
+            -
+              __assoc__:
+                -
+                  - disableValidation
+                  - ''
+                -
+                  - allowAliases
+                  - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: typedlinkfield\fields\LinkField

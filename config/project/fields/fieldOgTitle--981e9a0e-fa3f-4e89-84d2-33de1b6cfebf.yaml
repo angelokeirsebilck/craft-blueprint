@@ -1,0 +1,19 @@
+columnSuffix: zlcotvjo
+contentColumnType: string(512)
+fieldGroup: 7f31d1d3-eb01-43ca-95ad-3f97fd85cf53 # SEO
+handle: fieldOgTitle
+instructions: ''
+name: 'OG Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 128
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

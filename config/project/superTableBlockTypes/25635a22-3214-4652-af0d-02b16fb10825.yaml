@@ -1,0 +1,35 @@
+field: cfbc3eea-5919-454a-89cd-d6b126eb23a8 # Media
+fieldLayouts:
+  c036bf2f-3bee-4a34-8a8c-135a7fc6fbca:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 67339eb1-4f0f-467d-9605-027b6d1ea9bf # Media
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  67339eb1-4f0f-467d-9605-027b6d1ea9bf: # Media
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: itemMedia
+    instructions: ''
+    name: Media
+    searchable: false
+    settings:
+      contentTable: '{{%matrixcontent_itemmedia}}'
+      maxBlocks: '1'
+      minBlocks: ''
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix

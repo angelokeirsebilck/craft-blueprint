@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 7f31d1d3-eb01-43ca-95ad-3f97fd85cf53 # SEO
+handle: fieldOgImage
+instructions: 'This image should be preferably 1200x630 pixels.'
+name: 'OG Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: true
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

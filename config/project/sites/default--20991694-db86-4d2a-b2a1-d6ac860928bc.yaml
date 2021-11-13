@@ -1,9 +1,0 @@
-baseUrl: /en
-enabled: true
-handle: default
-hasUrls: true
-language: en
-name: 'BOA EN'
-primary: true
-siteGroup: df9091c7-0bb3-4e67-9c06-111bfa07c278 # BOA
-sortOrder: 1

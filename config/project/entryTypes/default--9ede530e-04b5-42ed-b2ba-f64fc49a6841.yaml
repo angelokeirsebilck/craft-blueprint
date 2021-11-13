@@ -1,0 +1,38 @@
+fieldLayouts:
+  c269dd60-18cc-42ba-ad2b-e089f878194d:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Inhoud
+        sortOrder: 1
+handle: default
+hasTitleField: true
+name: Standaard
+section: 78a711a8-8a6e-4c0c-b733-35f419f636da # Legal Pages
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

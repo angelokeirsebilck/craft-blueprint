@@ -1,0 +1,9 @@
+baseUrl: /en
+enabled: true
+handle: siteEn
+hasUrls: true
+language: en
+name: 'BOA EN'
+primary: false
+siteGroup: 89c39398-d7fd-4252-b371-be546e36ea3d # BOA Blueprint
+sortOrder: 2

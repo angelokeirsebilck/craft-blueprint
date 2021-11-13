@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: cta
+name: 'Call to action'
+propagationMethod: all
+siteSettings:
+  e00c4aea-76af-41ef-9d65-b6e755f0b74b: # BOA Blueprint
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

@@ -1,0 +1,38 @@
+fieldLayouts:
+  5ced67a9-194d-46f0-a260-fe32f5f03d17:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Inhoud
+        sortOrder: 1
+handle: default
+hasTitleField: true
+name: Standaard
+section: cb59c0b6-7d6b-49aa-aa67-38c1fd27168e # Call to action
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

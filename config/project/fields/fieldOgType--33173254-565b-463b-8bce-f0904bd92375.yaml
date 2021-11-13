@@ -1,0 +1,35 @@
+columnSuffix: cnirjdtp
+contentColumnType: string
+fieldGroup: 7f31d1d3-eb01-43ca-95ad-3f97fd85cf53 # SEO
+handle: fieldOgType
+instructions: ''
+name: 'OG Type'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Website
+        -
+          - value
+          - website
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Article
+        -
+          - value
+          - article
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

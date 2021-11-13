@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: nl-BE
+name: 'BOA Blueprint'
+primary: true
+siteGroup: 89c39398-d7fd-4252-b371-be546e36ea3d # BOA Blueprint
+sortOrder: 1

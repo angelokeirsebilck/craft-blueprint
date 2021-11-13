@@ -1,0 +1,35 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f0908c41-408b-4fd4-a5ac-6c0d41ec5cc2 # Navigation
+handle: fieldLegalNav
+instructions: ''
+name: 'Legal Nav'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 9fafec74-02e0-4b8b-b937-2338db240270
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - cda2b993-835f-494f-8ec9-bbeb85e6881a
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_fieldlegalnav}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

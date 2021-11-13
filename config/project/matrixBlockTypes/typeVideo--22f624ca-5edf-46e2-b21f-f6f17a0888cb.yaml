@@ -1,0 +1,99 @@
+field: 67339eb1-4f0f-467d-9605-027b6d1ea9bf # Media
+fieldLayouts:
+  a3cec1b3-1666-490d-832a-d7bffc918de0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2c2eef47-2fb3-433d-a10d-65bebfd97352 # Video
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b998bbc5-30a3-4a28-961b-be125684d5b1 # Thumbnail
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2c2eef47-2fb3-433d-a10d-65bebfd97352: # Video
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: itemVideo
+    instructions: ''
+    name: Video
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - json
+        - video
+      defaultUploadLocationSource: 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  b998bbc5-30a3-4a28-961b-be125684d5b1: # Thumbnail
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: itemThumbnail
+    instructions: ''
+    name: Thumbnail
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:39767a10-7f83-47f1-8e46-4191420cb937' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: typeVideo
+name: Video
+sortOrder: 2

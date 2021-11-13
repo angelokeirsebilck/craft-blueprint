@@ -1,0 +1,54 @@
+fieldLayouts:
+  0020755f-ce0f-415c-ad3b-773ba7a6409a:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: fc1b17a9-0211-42c1-809d-fa4debe28b05 # Main Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Main
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: bdb52f90-ec89-42ef-952d-971eb7c9cdd2 # Footer Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 02435f26-389a-46e5-83af-bbfd9249a147 # Footer Highlight Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Footer
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 906032d5-2d9a-45bf-a447-dd5bf81760ff # Legal Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Legal Nav'
+        sortOrder: 3
+handle: globalNavigation
+name: Navigation
+sortOrder: 2

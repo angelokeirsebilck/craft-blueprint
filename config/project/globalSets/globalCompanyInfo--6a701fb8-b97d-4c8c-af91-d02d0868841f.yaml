@@ -1,0 +1,171 @@
+fieldLayouts:
+  cf380d21-8bc1-4a64-a677-093b0100ef14:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 35f5e08c-7010-4c2a-ad0f-71b3df4868d6 # Address Line 1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7b2a6fcb-14f1-4e7c-87b7-52aaaa609a6f # Address Line 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3c8bcd4c-510d-4a19-a388-033bbf6470c5 # Address Line 3
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 14556f7e-212c-40f4-9033-43c40237727c # Company Baseline
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f2d00e57-4f30-49ec-a7bc-0127126b4936 # Company Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 83e957a0-0022-480b-9f79-5311ae44c3df # Email Address
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bfd132e4-c536-476c-b507-772d22ff9ed6 # Telephone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1b4764a7-5365-415d-9577-319869ef0e4d # Linked In
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Details
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: fd47ad7e-19cb-4cce-af86-3cb511fedb96 # Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7d63e420-fdf3-4b22-bf24-37106fa1b3fb # Logo Footer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 77bde9f8-3cd5-47a8-97eb-2c8591a78af7 # Favicon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d8df4054-5da2-48e3-930f-317765ee3f77 # Touch Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Logo
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 0769c27c-c3ca-40c3-a059-ea6697cd2551 # Meta Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fdc89d92-ba04-42f4-8d2e-b8a1acc3fd66 # Meta Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 981e9a0e-fa3f-4e89-84d2-33de1b6cfebf # OG Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: be9ba63f-f0f0-4604-b508-68421bc06b5d # OG Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 33173254-565b-463b-8bce-f0904bd92375 # OG Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 3
+handle: globalCompanyInfo
+name: 'Company Info'
+sortOrder: 1
